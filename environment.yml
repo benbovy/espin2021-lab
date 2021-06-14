@@ -1,0 +1,30 @@
+name: espin2021-lab
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - fastscape=0.1.0beta3
+  - ipyfastscape=0.2.0
+  - jupyterlab=3
+  - landlab
+  - bmi-topography
+  - ipyfastscape
+  - ipyleaflet
+  - ipywidgets
+  - ipykernel
+  - ipython=7.10
+  - matplotlib-base
+  - graphviz
+  - python-graphviz
+  - xarray
+  - xarray-simlab=0.5.0
+  - zarr
+  - pooch
+  - dask
+  - dask-labextension
+  - netcdf4
+  - tqdm
+  - numba
+  - hvplot=0.7.0
+  - datashader
+  - pip
