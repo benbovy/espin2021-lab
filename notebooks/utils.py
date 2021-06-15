@@ -2,7 +2,7 @@ import numpy as np
 import xarray as xr
 import xsimlab as xs
 from fastscape.models import basic_model
-from fastscape.processes import SurfaceTopography
+from fastscape.processes import SurfaceTopography, RasterGrid2D
 from bmi_topography import Topography
 
 
@@ -78,6 +78,7 @@ def run_fastscape_model(dem, scheduler, store, U=1e-5, K=[2e-6, 4e-6, 8e-6, 1.6e
             model=model, batch_dim="batch", parallel=True, scheduler=scheduler, store=store
         )
         .set_index(batch="spl__k_coef")
+        .assign_coords(x=dem.x, y=dem.y)
     )
     
     return out_ds
